@@ -5,5 +5,9 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    baseUrl: 'http://automationexercise.com',
+    fixturesFolder: 'cypress/fixtures',
+    defaultCommandTimeout: 10000,
+    retries: 1,
   },
 });

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/LeuBorelli/pgats-web-trabalho-final#readme",
   "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
     "cypress": "^15.5.0"
   }
 }
