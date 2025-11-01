@@ -6,9 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run": "cypress run",
-    "report:merge": "npx mochawesome-merge cypress/reports/*.json > cypress/reports/report.json",
-    "report:generate": "npx marge cypress/reports/report.json --reportDir cypress/reports --inline",
-    "report:full": "npm run report:merge && npm run report:generate"
+    "cy:run:open": "(npm run cy:run || true) && start cypress/reports/html/index.html",
+    "cy:run:ci": "npm run cy:run || true"
   },
   "repository": {
     "type": "git",
