@@ -2,7 +2,6 @@ import { gerarDados } from '../support/helpers.js'
 import home from '../pages/home/HomePage.js'
 import signupLogin from '../pages/login/LoginPage.js'
 
-
 describe('Logout User', () => {
     let dados
 

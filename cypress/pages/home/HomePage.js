@@ -6,7 +6,8 @@ class HomePage {
         loggedInAsText: () => cy.get('li:contains("Logged in as")'),
         logoutAccount: () => cy.get('[href="/logout"]'),
         contactUsButton: () => cy.get('a[href="/contact_us"]'),
-        productsButton: () => cy.get('.shop-menu a[href="/products"]')
+        productsButton: () => cy.get('.shop-menu a[href="/products"]'),
+        cartButton: () => cy.get('.shop-menu a[href="/view_cart"]')
     }
 
     acessarPaginaInicial() {
@@ -43,6 +44,10 @@ class HomePage {
 
     clicarBotaoProducts() {
         this.elements.productsButton().click()
+    }
+
+    clicarBotaoCart() {
+        this.elements.cartButton().click()
     }
 }
 

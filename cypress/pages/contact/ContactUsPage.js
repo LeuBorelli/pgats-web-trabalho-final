@@ -1,5 +1,3 @@
-// cypress/pages/contact/ContactUsPage.js
-
 class ContactUsPage {
     elements = {
         getInTouchTitle: () => cy.contains('h2', 'Get In Touch'),

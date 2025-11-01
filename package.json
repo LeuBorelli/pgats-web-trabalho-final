@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "cypress run",
+    "report:merge": "npx mochawesome-merge cypress/reports/*.json > cypress/reports/report.json",
+    "report:generate": "npx marge cypress/reports/report.json --reportDir cypress/reports --inline",
+    "report:full": "npm run report:merge && npm run report:generate"
   },
   "repository": {
     "type": "git",
@@ -20,6 +24,7 @@
   "homepage": "https://github.com/LeuBorelli/pgats-web-trabalho-final#readme",
   "devDependencies": {
     "@faker-js/faker": "^10.1.0",
-    "cypress": "^15.5.0"
+    "cypress": "^15.5.0",
+    "cypress-mochawesome-reporter": "^4.0.2"
   }
 }

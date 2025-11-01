@@ -6,7 +6,9 @@ class ProductsPage {
         searchInput: () => cy.get('#search_product'),
         searchButton: () => cy.get('#submit_search'),
         searchedProductsTitle: () => cy.contains('h2', 'Searched Products'),
-        productListNames: () => cy.get('.features_items .productinfo p')
+        productListNames: () => cy.get('.features_items .productinfo p'),
+        firstProductAddToCartButton: () => cy.get('.features_items .add-to-cart').first(),
+        viewCartButtonModal: () => cy.get('.modal-body a[href="/view_cart"]')
     }
 
     verificarPaginaProdutosVisivel() {
@@ -37,6 +39,14 @@ class ProductsPage {
                 expect(texto.toUpperCase()).to.include(nomeProduto.toUpperCase())
             })
         })
+    }
+
+    adicionarPrimeiroProdutoAoCarrinho() {
+        this.elements.firstProductAddToCartButton().click()
+    }
+
+    clicarViewCartNoModal() {
+        this.elements.viewCartButtonModal().click()
     }
 }
 

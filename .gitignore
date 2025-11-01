@@ -4,3 +4,5 @@ build/
 .env
 *.log
 screenshots
+cypress/reports
+mochawesome-report
